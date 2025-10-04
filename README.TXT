@@ -45,6 +45,12 @@ Answers:
 
 32. You can print all keys using keySet().
 
-33. 
+34. Both HashSet and ArrayList store collections of objects and let you iterate through them but an ArrayList keeps elements in order, allows duplicates, and supports access by index while a HashSet does not allow duplicates, does not maintain order and uses hashing for fast lookups.
 
+35. Returning words in an ArrayList gives them back in the order they were added and includes duplicates, while returning words in a HashSet removes duplicates and does not guarantee any order.
 
+36. If there are two or more spaces the split may produce empty strings between words which can cause unwanted “empty words” in the result. 
+
+37. 
+
+ 
