@@ -28,10 +28,23 @@ Answers:
 
 26. By using the size() method. 
 
-28. 
+28. When you add an entry with a key that already exists, the old value is replaced with the new one.
 
-29.
+29. When you add an entry with two different keys, the map stores both entries separately.
 
-30.
+30. HashMap<String, String> phoneBook = new HashMap<>();
+    phoneBook.put("Timur", "123-4567");
+
+    if (phoneBook.containsKey("Timur")) {
+        System.out.println("Key found!");
+    } else {
+        System.out.println("Key not found.");
+    }
+
+31. If you look up a value with a key that does not exist, the map returns null.
+
+32. You can print all keys using keySet().
+
+33. 
 
 
