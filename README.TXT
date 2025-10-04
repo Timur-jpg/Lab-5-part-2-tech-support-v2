@@ -51,6 +51,5 @@ Answers:
 
 36. If there are two or more spaces the split may produce empty strings between words which can cause unwanted “empty words” in the result. 
 
-37. 
 
  

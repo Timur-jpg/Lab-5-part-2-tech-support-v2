@@ -1,37 +1,34 @@
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
- * InputReader reads typed text input from the standard text terminal. 
- * The text typed by a user is then chopped into words, and a set of words 
- * is provided.
- * 
- * @author  Michael Kölling and David J. Barnes
- * @version 7.0
+ * InputReader reads user input and returns it as a set of words.
  */
 public class InputReader
 {
-    private Scanner reader;
+    private Scanner scanner;
 
     /**
-     * Create a new InputReader that reads text from the text terminal.
+     * Constructor for InputReader
      */
     public InputReader()
     {
-        reader = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
     /**
-     * Read a line of text from standard input (the text terminal),
-     * and return it as a String.
-     *
-     * @return  A String typed by the user.
+     * Read a line of text from the user and return it as a set of words.
+     * @return A set of words typed by the user.
      */
-    public String getInput()
+    public HashSet<String> getInput()
     {
-        // print prompt
-        System.out.print("> ");         
-        String inputLine = reader.nextLine();
+        String inputLine = scanner.nextLine().trim().toLowerCase();
+        String[] words = inputLine.split("\\s+"); // split on one or more spaces
 
-        return inputLine;
+        HashSet<String> wordSet = new HashSet<>();
+        for(String word : words) {
+            wordSet.add(word);
+        }
+        return wordSet;
     }
 }
